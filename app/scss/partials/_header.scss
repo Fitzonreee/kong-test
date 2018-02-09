@@ -1,8 +1,4 @@
-// nav {
-//   background-color: $darkBlue;
-// }
-
-$fillButton: #023e69;
+/**--- Header ---**/
 
 header {
   background-color: $darkBlue;
@@ -12,7 +8,16 @@ header {
       font-size: 13px;
     }
     .btn {
-      margin: 0 1em; }
+      margin-left: 1em;
+      color: $white !important;
+      &-enterprise {
+        border: 1px solid $lightGray;
+      }
+      &-install {
+        background-color: $btnBlue;
+        border: 1px solid $btnBlue;
+      }
+    }
   }
 }
 
@@ -25,6 +30,8 @@ header {
   p {
     margin-right: auto;
     margin-bottom: 0;
+    text-transform: uppercase;
+    font-weight: 500;
   }
   ul {
     display: flex;
@@ -105,6 +112,7 @@ header {
     margin-right: auto;
   }
   .top-bar-right {
+    z-index: 10;
     .menu {
       background: $darkBlue;
       li > a {

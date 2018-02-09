@@ -1,4 +1,7 @@
 /**--- Variables ---**/
+* {
+  transition: all 250ms ease; }
+
 .section {
   padding: 4em 0; }
 
@@ -55,6 +58,23 @@ hr {
     -ms-flex-direction: column;
         flex-direction: column; }
 
+.heading-divide {
+  position: relative;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center; }
+  .heading-divide::before, .heading-divide::after {
+    content: '';
+    height: 1px;
+    -ms-flex-positive: 1;
+        flex-grow: 1;
+    border-bottom: 1px solid #a9abb0; }
+  .heading-divide::before {
+    margin-right: 0.75em; }
+  .heading-divide::after {
+    margin-left: 0.75em; }
+
 /**--- Components ---**/
 .btn {
   padding: 0.5em 2em;
@@ -91,13 +111,20 @@ hr {
   .section-form li {
     color: rgba(0, 0, 0, 0.7); }
 
+/**--- Header ---**/
 header {
   background-color: #08304c; }
   header .links a {
     text-transform: uppercase;
     font-size: 13px; }
   header .links .btn {
-    margin: 0 1em; }
+    margin-left: 1em;
+    color: #FFFFFF !important; }
+    header .links .btn-enterprise {
+      border: 1px solid #a9abb0; }
+    header .links .btn-install {
+      background-color: #023f6b;
+      border: 1px solid #023f6b; }
 
 .links-wrapper {
   display: -ms-flexbox;
@@ -107,7 +134,9 @@ header {
     padding: 1.5rem 0; }
   .links-wrapper p {
     margin-right: auto;
-    margin-bottom: 0; }
+    margin-bottom: 0;
+    text-transform: uppercase;
+    font-weight: 500; }
   .links-wrapper ul {
     display: -ms-flexbox;
     display: flex;
@@ -176,13 +205,15 @@ header {
   background-color: #08304c; }
   .top-bar .top-bar-left {
     margin-right: auto; }
-  .top-bar .top-bar-right .menu {
-    background: #08304c; }
-    .top-bar .top-bar-right .menu li > a {
-      color: rgba(255, 255, 255, 0.6); }
-      .top-bar .top-bar-right .menu li > a:hover {
-        color: white;
-        font-weight: 500; }
+  .top-bar .top-bar-right {
+    z-index: 10; }
+    .top-bar .top-bar-right .menu {
+      background: #08304c; }
+      .top-bar .top-bar-right .menu li > a {
+        color: rgba(255, 255, 255, 0.6); }
+        .top-bar .top-bar-right .menu li > a:hover {
+          color: white;
+          font-weight: 500; }
 
 /* medium down  */
 @media screen and (max-width: 1000px) {
@@ -222,13 +253,20 @@ header {
   border-color: #16a956;
   margin-bottom: 1rem; }
 
+.section-hero .building-wrap {
+  margin-bottom: 4rem; }
+
+.section-hero p {
+  text-transform: uppercase;
+  font-size: 15px;
+  line-height: 20px;
+  margin-bottom: 1rem; }
+
 .section-hero .partner-logos {
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-align: center;
-      align-items: center;
-  -ms-flex-pack: distribute;
-      justify-content: space-around; }
+  -ms-flex-pack: justify;
+      justify-content: space-between; }
 
 .section-enterprise {
   background-image: url("../images/bg-gradient.jpg");

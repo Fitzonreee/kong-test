@@ -10,6 +10,7 @@ $green: #16a956;
 $lightGray: #a9abb0;
 $offWhite: #f7f7f7;
 $grayText: rgba(0, 0, 0, 0.7);
+$btnBlue: #023f6b;
 
 
 @media screen and (min-width: 40em) {
@@ -19,6 +20,10 @@ $grayText: rgba(0, 0, 0, 0.7);
 
 @media screen and (min-width: 64em) {
 
+}
+
+* {
+  transition: all 250ms ease;
 }
 
 .section {
@@ -31,10 +36,6 @@ $grayText: rgba(0, 0, 0, 0.7);
     list-style-type: none;
   }
 }
-
-
-
-
 
 /**--- Fonts ---**/
 h1, h3, h4,  h5, p, label, button, input, input::placeholder, li, a {
@@ -79,10 +80,6 @@ hr {
    max-width: initial;
 }
 
-// .text-center {
-//   text-align: center;
-// }
-
 .v-center {
   display: flex;
   justify-content: center;
@@ -90,6 +87,21 @@ hr {
   &-stack {
     flex-direction: column;
   }
+}
+
+.heading-divide {
+  position: relative;
+  display: flex;
+  align-items: center;
+  &::before,
+  &::after {
+    content: '';
+    height: 1px;
+    flex-grow: 1;
+    border-bottom: 1px solid $lightGray;
+  }
+  &::before { margin-right: 0.75em; }
+  &::after  { margin-left: 0.75em; }
 }
 
 /**--- Components ---**/
