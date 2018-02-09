@@ -58,19 +58,22 @@
       input {
         margin-bottom: 0 !important;
       }
+      .area-code {
+        position: relative;
+        &:after {
+          position: absolute;
+          display: block;
+          content: " - ";
+          top: 35%;
+          right: -0.25rem;
+        }
+      }
+      .push {
+        margin-top: 1.5em;
+      }
       .byline {
         font-size: 13px;
         color: $lightGray;
-      }
-      .area-code {
-      	position: relative;
-      	&:after {
-      		position: absolute;
-      		display: block;
-      		content: " - ";
-      		top: 40%;
-      		right: -0.25rem;
-      	}
       }
     }
   }
