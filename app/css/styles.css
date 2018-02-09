@@ -88,8 +88,98 @@ h4 {
   .section-form li {
     color: rgba(0, 0, 0, 0.7); }
 
-nav {
+header {
   background-color: #08304c; }
+  header .links a {
+    text-transform: uppercase;
+    font-size: 13px; }
+  header .links .btn {
+    margin: 0 1em; }
+
+.menuIcon {
+  width: 25px;
+  height: 22px;
+  cursor: pointer; }
+  .menuIcon .bar,
+  .menuIcon .bar:after,
+  .menuIcon .bar:before {
+    width: 25px;
+    height: 2px; }
+  .menuIcon .bar {
+    position: relative;
+    transform: translateY(10px);
+    background: white;
+    transition: all 0ms 300ms; }
+    .menuIcon .bar:before {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 10px;
+      background: white;
+      transition: bottom 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1), transform 300ms cubic-bezier(0.23, 1, 0.32, 1); }
+    .menuIcon .bar:after {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 10px;
+      background: white;
+      transition: top 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1), transform 300ms cubic-bezier(0.23, 1, 0.32, 1); }
+    .menuIcon .bar.animate {
+      background: rgba(255, 255, 255, 0); }
+      .menuIcon .bar.animate:after {
+        top: 0;
+        transform: rotate(45deg);
+        transition: top 300ms cubic-bezier(0.23, 1, 0.32, 1), transform 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1); }
+      .menuIcon .bar.animate:before {
+        bottom: 0;
+        transform: rotate(-45deg);
+        transition: bottom 300ms cubic-bezier(0.23, 1, 0.32, 1), transform 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1); }
+
+.title-bar {
+  display: none;
+  height: 76px;
+  -ms-flex-align: center;
+      align-items: center;
+  background: #08304c; }
+  .title-bar img {
+    margin-right: auto; }
+
+.top-bar {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center;
+  height: 76px;
+  background-color: #08304c; }
+  .top-bar .top-bar-left {
+    margin-right: auto; }
+  .top-bar .top-bar-right .menu {
+    background: #08304c; }
+    .top-bar .top-bar-right .menu li > a {
+      color: rgba(255, 255, 255, 0.6); }
+      .top-bar .top-bar-right .menu li > a:hover {
+        color: white;
+        font-weight: 500; }
+
+/* medium down  */
+@media screen and (max-width: 1000px) {
+  .title-bar {
+    display: -ms-flexbox;
+    display: flex; }
+  .top-bar {
+    display: none; }
+    .top-bar .menu-text {
+      display: none; }
+    .top-bar .menu li {
+      display: block; }
+    .top-bar.open {
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-direction: column;
+          flex-direction: column;
+      padding: 0; }
+      .top-bar.open .top-bar-right {
+        width: 100%; } }
 
 .section-hero h1 {
   color: #004B80;
