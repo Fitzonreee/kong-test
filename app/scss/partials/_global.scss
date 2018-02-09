@@ -2,10 +2,14 @@
 /**--- Variables ---**/
 $white: #FFFFFF;
 $darkGray: #2B303B;
-$darkBlue: #043e5e;
+$blue: #004B80;
+$darkBlue: #08304c;
+$darkestBlue: #062F4D;
 $gray: #4c4c4c;
 $green: #16a956;
 $lightGray: #a9abb0;
+$offWhite: #f7f7f7;
+$grayText: rgba(0, 0, 0, 0.7);
 
 
 @media screen and (min-width: 40em) {
@@ -21,18 +25,40 @@ $lightGray: #a9abb0;
   padding: 4em 0;
 }
 
+.links {
+  ul {
+    margin: 0;
+    list-style-type: none;
+  }
+}
+
+
+
+
+
 /**--- Fonts ---**/
-h1 {
+h1, h3, h4,  h5, p, label, button, input, input::placeholder, li, a {
   font-family: 'Roboto', sans-serif;
 }
 
-h1,
 h3 {
   font-weight: 300;
 }
 
+h1 {
+  font-size: 41px;
+  margin-bottom: 2rem;
+  line-height: 47px;
+}
 h4 {
+  font-size: 21px;
+  line-height: 28px;
+  margin-bottom: 2.5rem;
   font-weight: 400;
+}
+
+.light {
+  color: $white;
 }
 
 .dark {
@@ -73,5 +99,17 @@ h4 {
       background: $green;
       border-color: $green;
     }
+  }
+}
+
+/**--- Forms ---**/
+.form {
+  input,
+  select,
+  textarea {
+    border-radius: 0.25em;
+  }
+  input[type='text'] {
+    width: 100%;
   }
 }

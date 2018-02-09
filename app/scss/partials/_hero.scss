@@ -1,15 +1,37 @@
-.hero {
-  h4 {
-    color: $gray;
+.section-hero {
+  h1 {
+    color: $blue;
+    font-weight: 300;
+    .strong {
+      font-weight: 400;
+    }
+  }
+  h3 {
+    color: $grayText;
+    margin-bottom: 2em;
+  }
+  .btn-solid {
+    margin: 0 1rem 1rem 0;
+  }
+  .btn-clear {
+    color: $green;
+    border-color: $green;
+    margin-bottom: 1rem;
   }
 }
 
-.enterprise {
-  background-color: $darkGray;
+.section-enterprise {
+  background-image: url('../images/bg-gradient.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   h1 {
     color: $white;
   }
   h4 {
     color: $lightGray;
+  }
+  svg {
+    max-width: 100%;
   }
 }

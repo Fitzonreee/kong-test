@@ -1,5 +1,20 @@
-.form {
-  input {
+.section-form {
+  background-color: $offWhite;
+  .btn {
     width: 100%;
+    padding: 10px 0;
+  }
+  h1 {
+    padding-top: 1em;
+    margin-bottom: 0;
+    color: $darkGray;
+  }
+  h3 {
+    padding: 0.5em 0;
+  }
+  h3,
+  p,
+  li {
+    color: $grayText;
   }
 }
