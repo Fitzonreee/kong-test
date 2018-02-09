@@ -27,7 +27,7 @@ $btnBlue: #023f6b;
 }
 
 .section {
-  padding: 4em 0;
+  padding: 5em 0;
 }
 
 .links {
@@ -100,8 +100,8 @@ hr {
     flex-grow: 1;
     border-bottom: 1px solid $lightGray;
   }
-  &::before { margin-right: 0.75em; }
-  &::after  { margin-left: 0.75em; }
+  &::before { margin-right: 1em; }
+  &::after  { margin-left: 1em; }
 }
 
 /**--- Components ---**/
@@ -127,5 +127,13 @@ hr {
   }
   input[type='text'] {
     width: 100%;
+  }
+  .heavy {
+    label {
+      font-weight: 500;
+    }
+    div {
+      margin-bottom: 0.25em;
+    }
   }
 }

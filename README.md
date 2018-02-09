@@ -1,5 +1,5 @@
-# Gulp Starter for CSS Tricks Tutorial  
+# Kong Enterprise Landing Page
 
-This repo is a gulp starter for this CSS Tricks tutorial. 
+All the compiled static files are in the dist folder.
 
-Remember to do run the `npm install` command after cloning this repo :) 
+Run `npm install` command and then `gulp` to launch locally.

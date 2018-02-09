@@ -1,3 +1,4 @@
+/**--- Hero ---**/
 .section-hero {
   h1 {
     color: $blue;
@@ -10,36 +11,62 @@
     color: $grayText;
     margin-bottom: 2em;
   }
+  .v-center {
+    flex-direction: column;
+    @media screen and (min-width: 40em) {
+      flex-direction: row;
+    }
+  }
+  .btn {
+    width: 14em;
+    text-align: center;
+    @media screen and (min-width: 40em) {
+      width: max-content;
+    }
+  }
   .btn-solid {
-    margin: 0 1rem 1rem 0;
+    margin: 1rem 0;
+    @media screen and (min-width: 40em) {
+      margin: 0 1rem 1rem 0;
+    }
+    &:hover {
+      color: $white;
+    }
   }
   .btn-clear {
     color: $green;
     border-color: $green;
     margin-bottom: 1rem;
+    &:hover {
+      background-color: $green;
+      color: $white;
+    }
   }
   .building-wrap {
     margin-bottom: 4rem;
   }
   p {
-    text-transform: uppercase;
     font-size: 15px;
     line-height: 20px;
     margin-bottom: 1rem;
   }
-  .line-through {
-
-  }
   .partner-logos {
     display: flex;
-    // align-items: center;
-    justify-content: space-between;
-    //large-screens
-    // max-width: 541px;
-
+    flex-direction: column;
+    @media screen and (min-width: 64em) {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+    img {
+      padding: 1em 0;
+      @media screen and (min-width: 64em) {
+        padding: 1.5em 0 0 0;
+      }
+    }
   }
 }
 
+/**--- Enterprise ---**/
 .section-enterprise {
   background-image: url('../images/bg-gradient.jpg');
   background-position: center;

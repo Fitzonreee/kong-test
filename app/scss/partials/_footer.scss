@@ -3,6 +3,10 @@
     color: $darkestBlue;
     text-transform: uppercase;
     font-weight: 500;
+    padding-top: 1.75em;
+    @media screen and (min-width: 64em) {
+      padding-top: 0;
+    }
   }
   h5,
   p,
@@ -25,7 +29,9 @@
   }
   .form-newsletter {
     input {
-      margin: 1.5em 0 0.5em 0;
+      @media screen and (min-width: 64em) {
+        margin: 1.5em 0 0.5em 0;
+      }
     }
     p {
       display: inline;
@@ -37,6 +43,10 @@
   display: flex;
   align-items: center;
   padding: 1.5em 0;
+  flex-direction: column;
+  @media screen and (min-width: 64em) {
+    flex-direction: row;
+  }
   ul, li {
     display: inline-block;
   }
@@ -50,16 +60,35 @@
     margin: 0 0.5rem;
     background-color: $lightGray;
   }
-  .legal {
+  .legal,
+  .social-icons {
     display: flex;
     align-items: center;
+  }
+  .legal {
+    justify-content: center;
+    @media screen and (min-width: 64em) {
+      justify-content: flex-start;
+    }
     .copyright {
       color: rgba(0, 0, 0, 0.7);
       padding-right: 2rem;
     }
+    h5 {
+      padding: 0;
+    }
   }
-
+  .kong-walker {
+    padding: 2em 0;
+    @media screen and (min-width: 64em) {
+      padding: 0;
+    }
+  }
   .social-icons {
+    justify-content: center;
+    @media screen and (min-width: 64em) {
+      justify-content: flex-end;
+    }
     li {
       margin: 0 0.5rem;
     }
