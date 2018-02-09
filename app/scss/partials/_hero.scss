@@ -18,6 +18,11 @@
     border-color: $green;
     margin-bottom: 1rem;
   }
+  .partner-logos {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
 }
 
 .section-enterprise {

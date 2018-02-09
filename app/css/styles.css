@@ -41,9 +41,6 @@ h4 {
   margin-right: auto;
   max-width: initial; }
 
-.text-center {
-  text-align: center; }
-
 .v-center {
   display: -ms-flexbox;
   display: flex;
@@ -111,6 +108,14 @@ nav {
   color: #16a956;
   border-color: #16a956;
   margin-bottom: 1rem; }
+
+.section-hero .partner-logos {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around; }
 
 .section-enterprise {
   background-image: url("../images/bg-gradient.jpg");
